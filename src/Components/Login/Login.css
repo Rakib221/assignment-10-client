@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: start;
+}
+.section {
+    position: relative;
+    min-height: 100vh;
+    background: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+.section.active {
+    background: #1f2937;
+}
+.section .container {
+    position: relative;
+    width: 850px;
+    height: 450px;
+    background: rgb(151, 133, 133);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+.section .container .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.section .container .user .imgBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5s;
+}
+.section .container .user .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section .container .user .formBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+}
+.section .container .user .formBox h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+.section .container .user .formBox input {
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.section .container .user .formBox input[type='submit'] {
+    max-width: 100px;
+    background: #677eff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.section .container .user.signUpBox .formBox input[type='submit'] {
+    background: #e73e45;
+}
+.section .container .user .formBox .signUp {
+    position: relative;
+    margin-top: 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.section .container .user .formBox .signUp a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #577eff;
+}
+.section .container .signUpBox {
+    pointer-events: none;
+}
+.section .container.active .signUpBox {
+    pointer-events: initial;
+}
+.section .container .signUpBox .formBox {
+    top: 100%;
+}
+.section .container.active .signUpBox .formBox {
+    top: 0;
+}
+.section .container .signUpBox .imgBox {
+    top: -100%;
+    transition: 0.5s;
+}
+.section .container.active .signUpBox .imgBox {
+    top: 0;
+}
+.section .container .signInBox .formBox {
+    top: 0;
+}
+.section .container.active .signInBox .formBox {
+    top: 100%;
+}
+
+.section .container .signInBox .imgBox {
+    top: 0;
+    transition: 0.5s;
+}
+.section .container.active .signInBox .imgBox {
+    top: -100%;
+}
+.continue {
+    text-align: center;
+    color: #555;
+    border-bottom: 1px solid gray;
+    transition: all 0.8s ease-out;
+    width: auto;
+    margin-left: 10px;
+}
+
+.wrapper {
+    margin-top: 10px;
+    margin-left: -10px;
+}
+.wrapper .button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    background: rgb(197, 197, 197);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-out;
+    overflow: hidden;
+}
+.wrapper .button:hover {
+    width: 170px;
+}
+.wrapper .button .icon {
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 50px;
+    transition: all 0.4s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon {
+    background: rgb(219, 68, 68);
+    color: #ffffff;
+}
+.wrapper .button:nth-child(2):hover .icon {
+    background: #4267b2;
+    color: #fff;
+}
+.wrapper .button:nth-child(3):hover .icon {
+    background: #333;
+    color: #fff;
+}
+.wrapper .button:nth-child(1) span {
+    color: rgb(219, 68, 68);
+}
+.wrapper .button:nth-child(2) span {
+    color: #4267b2;
+}
+.wrapper .button:nth-child(3) span {
+    color: #333;
+}
+.wrapper .button .icon .i {
+    padding-top: 10px;
+    font-size: 30px;
+    line-height: 50px;
+}
+.wrapper .button span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: all 0.4s ease-out;
+}
+
+@media (max-width: 991px) {
+    .section .container {
+        max-width: 400px;
+    }
+    .section .container .imgBox {
+        display: none;
+    }
+    .section .container .user .formBox {
+        width: 100%;
+    }
+    .section .container.active .signInBox .formBox {
+        top: -100%;
+    }
+}

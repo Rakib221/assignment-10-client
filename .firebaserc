@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "book-shelf-4c0d0",
+    "build": "book-shelf-5699b"
+  },
+  "targets": {}
+}
